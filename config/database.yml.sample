@@ -1,0 +1,16 @@
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+test: &test
+  adapter: postgresql
+  database: lowdown_test
+
+production:
+  adapter: postgresql
+  database: lowdown_production
+
+cucumber:
+  <<: *test
